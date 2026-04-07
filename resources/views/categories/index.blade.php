@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>BookList | {{ config('app.name', 'E Library Default') }}</title>
+        <title>Categories | {{ config('app.name', 'E Library Default') }}</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -13,20 +13,24 @@
         <x-header></x-header>
 
         <!--Book Section Start----> 
-            <section id="book-section" class="w-full p-5 lg:p-10 flex flex-col">
-
-                <input type="search" class="w-full lg:w-90 h-10 bg-gray-300 p-2.5 font-light text-base" placeholder="Search Book Here">
+            <section id="category" class="w-full p-5 lg:p-10 flex flex-col">
+                <!--Ini bagian atas section-->
+                <div class="flex flex-row items-center">
+                    <h2 class="font-bold text-2xl lg:text-4xl">
+                        Section Title
+                    </h2>
+                </div>
 
                 <!--ini Bagian bawah/list buku-->
-                <div class="mt-5 lg:mt-10 grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-10">
+                <div class="mt-5 lg:mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
                     @for ($index = 0; $index < 4; $index++)
-                        <x-book-item></x-book-item>
+                        <x-category-item></x-category-item>
                     @endfor
                 </div>
+
             </section>
         <!--Book Section End-->
-
-
+        
         <!--ini Footer-->
         <x-footer></x-footer>
     </body>
