@@ -36,31 +36,18 @@
             </nav>
         <!--Header End-->
 
-
-
         <!--Book Section Start----> 
             <section id="book-section" class="w-full p-5 lg:p-10 flex flex-col">
-                <!--Ini bagian atas section-->
-                <div class="flex flex-row items-center">
-                    <h2 class="font-bold text-2xl lg:text-4xl">
-                        Section Title
-                    </h2>
-                    <a href="#" class="ms-auto hidden lg:inline">
-                        See More
-                    </a>
-                </div>
+
+                <input type="search" class="w-full lg:w-90 h-10 bg-gray-300 p-2.5 font-light text-base" placeholder="Search Book Here">
 
                 <!--ini Bagian bawah/list buku-->
                 <div class="mt-5 lg:mt-10 grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-10">
-                    @for ($index = 0; $index < 8; $index++)
+                    @for ($index = 0; $index < 4; $index++)
                         <div class="w-full h-60 lg:h-100 bg-gray-400">
                         </div>
                     @endfor
                 </div>
-
-                <a href="#" class=" inline mt-5 mx-auto lg:hidden">
-                    See More
-                </a>
             </section>
         <!--Book Section End-->
 
