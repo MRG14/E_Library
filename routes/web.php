@@ -33,3 +33,7 @@ Route::get('/forgot-password', function () {
 Route::get('/reset-password', function () {
     return view('auth.reset-password');
 });
+
+Route::get('/panel', function () {
+    return view('panel.books.index');
+});

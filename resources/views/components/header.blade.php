@@ -16,9 +16,15 @@
             <li>
                 <a href="/categories">Categories</a>
             </li>
-            <li>
-                <a href="/login" class="bg-blue-500 p-2">Login</a>
-            </li>
+            @if (request()->is('panel'))
+                <span class="font-bold text-2xl">
+                    Hi,Admin E-library
+                </span>
+            @else
+                <li>
+                    <a href="/login" class="bg-blue-500 p-2">Login</a>
+                </li>
+            @endif
         </ul>
     <!--Ini untuk Menu Desktop:end-->
 
@@ -29,6 +35,7 @@
 </nav>
 <!--Header End-->
 
+<!--Mobile Menu:Start-->
 <div id="mobile-menu-layout" class="hidden w-full h-screen bg-white p-5 fixed top-0 left-0">
     <div class="w-10 h-10 bg-gray-400 ms-auto" onclick="showMenu(false)">
     </div>
@@ -48,3 +55,4 @@
         </li>
     </ul>
 </div>
+<!--Mobile Menu:End-->
